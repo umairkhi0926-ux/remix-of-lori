@@ -67,6 +67,14 @@ export default {
           DEFAULT: "hsl(var(--sunny))",
           light: "hsl(var(--sunny-light))",
         },
+        purple: {
+          DEFAULT: "hsl(var(--purple))",
+          light: "hsl(var(--purple-light))",
+        },
+        mint: {
+          DEFAULT: "hsl(var(--mint))",
+          light: "hsl(var(--mint-light))",
+        },
         cream: "hsl(var(--cream))",
         bark: "hsl(var(--bark))",
         sidebar: {
@@ -123,6 +131,15 @@ export default {
           "70%": { transform: "scale(0.9)" },
           "100%": { opacity: "1", transform: "scale(1)" },
         },
+        "jiggle": {
+          "0%, 100%": { transform: "rotate(-2deg)" },
+          "50%": { transform: "rotate(2deg)" },
+        },
+        "pop": {
+          "0%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.15)" },
+          "100%": { transform: "scale(1)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -133,6 +150,8 @@ export default {
         "slide-in-right": "slide-in-right 0.6s ease-out forwards",
         "slide-in-left": "slide-in-left 0.6s ease-out forwards",
         "bounce-in": "bounce-in 0.6s ease-out forwards",
+        "jiggle": "jiggle 0.3s ease-in-out",
+        "pop": "pop 0.3s ease-out",
       },
     },
   },

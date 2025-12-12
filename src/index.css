@@ -2,115 +2,123 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Lori J Thompson Author Website - Bright & Playful Design System */
+/* Lori J Thompson Author Website - Super Kid-Friendly Design System */
 
 @layer base {
   :root {
-    /* Bright, playful color palette */
-    --background: 48 100% 98%;
-    --foreground: 142 40% 15%;
+    /* Extra bright, playful color palette */
+    --background: 48 100% 97%;
+    --foreground: 280 60% 25%;
 
     --card: 0 0% 100%;
-    --card-foreground: 142 40% 15%;
+    --card-foreground: 280 60% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 142 40% 15%;
+    --popover-foreground: 280 60% 25%;
 
-    /* Forest Green - Primary */
-    --primary: 142 55% 35%;
-    --primary-foreground: 48 100% 98%;
+    /* Bright Green - Primary */
+    --primary: 145 65% 42%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Warm Coral - Secondary */
-    --secondary: 16 85% 65%;
+    /* Coral Pink - Secondary */
+    --secondary: 350 85% 65%;
     --secondary-foreground: 0 0% 100%;
 
     /* Sky Blue - Muted */
-    --muted: 199 85% 92%;
-    --muted-foreground: 199 40% 35%;
+    --muted: 200 95% 92%;
+    --muted-foreground: 200 50% 35%;
 
     /* Sunny Yellow - Accent */
-    --accent: 45 95% 60%;
-    --accent-foreground: 45 80% 20%;
+    --accent: 45 100% 55%;
+    --accent-foreground: 45 90% 20%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 142 20% 85%;
-    --input: 142 20% 90%;
-    --ring: 142 55% 35%;
+    --border: 280 30% 88%;
+    --input: 280 20% 92%;
+    --ring: 280 65% 60%;
 
-    --radius: 1rem;
+    --radius: 1.25rem;
 
-    /* Custom colors for the theme */
-    --forest: 142 55% 35%;
-    --forest-light: 142 45% 50%;
-    --coral: 16 85% 65%;
-    --coral-light: 16 90% 75%;
-    --sky: 199 85% 65%;
-    --sky-light: 199 85% 92%;
-    --sunny: 45 95% 60%;
-    --sunny-light: 45 95% 85%;
-    --cream: 48 100% 98%;
-    --bark: 25 30% 25%;
+    /* Extended fun colors */
+    --forest: 145 65% 42%;
+    --forest-light: 145 55% 55%;
+    --coral: 350 85% 65%;
+    --coral-light: 350 90% 78%;
+    --sky: 200 95% 60%;
+    --sky-light: 200 95% 88%;
+    --sunny: 45 100% 55%;
+    --sunny-light: 45 100% 80%;
+    --cream: 48 100% 97%;
+    --bark: 25 40% 30%;
+    --purple: 280 70% 60%;
+    --purple-light: 280 70% 80%;
+    --mint: 165 70% 55%;
+    --mint-light: 165 70% 85%;
 
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 142 55% 35%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 142 20% 95%;
-    --sidebar-accent-foreground: 142 55% 35%;
-    --sidebar-border: 142 20% 85%;
-    --sidebar-ring: 142 55% 35%;
+    --sidebar-foreground: 280 60% 25%;
+    --sidebar-primary: 145 65% 42%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 280 30% 95%;
+    --sidebar-accent-foreground: 145 65% 42%;
+    --sidebar-border: 280 30% 88%;
+    --sidebar-ring: 280 65% 60%;
   }
 
   .dark {
-    --background: 142 40% 8%;
+    --background: 280 40% 8%;
     --foreground: 48 100% 98%;
 
-    --card: 142 35% 12%;
+    --card: 280 35% 12%;
     --card-foreground: 48 100% 98%;
 
-    --popover: 142 35% 12%;
+    --popover: 280 35% 12%;
     --popover-foreground: 48 100% 98%;
 
-    --primary: 142 55% 45%;
-    --primary-foreground: 142 40% 8%;
+    --primary: 145 60% 50%;
+    --primary-foreground: 280 40% 8%;
 
-    --secondary: 16 75% 55%;
+    --secondary: 350 75% 60%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 142 30% 18%;
-    --muted-foreground: 142 15% 65%;
+    --muted: 280 30% 18%;
+    --muted-foreground: 280 15% 65%;
 
-    --accent: 45 85% 50%;
-    --accent-foreground: 45 80% 10%;
+    --accent: 45 90% 55%;
+    --accent-foreground: 45 90% 10%;
 
     --destructive: 0 62.8% 40%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 142 25% 20%;
-    --input: 142 25% 20%;
-    --ring: 142 55% 45%;
+    --border: 280 25% 22%;
+    --input: 280 25% 22%;
+    --ring: 280 65% 55%;
 
-    --forest: 142 55% 45%;
-    --forest-light: 142 45% 55%;
-    --coral: 16 75% 55%;
-    --coral-light: 16 80% 65%;
-    --sky: 199 75% 55%;
-    --sky-light: 199 50% 25%;
-    --sunny: 45 85% 50%;
+    --forest: 145 60% 50%;
+    --forest-light: 145 50% 60%;
+    --coral: 350 75% 60%;
+    --coral-light: 350 80% 70%;
+    --sky: 200 80% 55%;
+    --sky-light: 200 50% 25%;
+    --sunny: 45 90% 55%;
     --sunny-light: 45 60% 25%;
-    --cream: 142 40% 8%;
+    --cream: 280 40% 8%;
     --bark: 25 20% 75%;
+    --purple: 280 65% 55%;
+    --purple-light: 280 50% 35%;
+    --mint: 165 60% 50%;
+    --mint-light: 165 40% 25%;
 
-    --sidebar-background: 142 35% 10%;
+    --sidebar-background: 280 35% 10%;
     --sidebar-foreground: 48 100% 98%;
-    --sidebar-primary: 142 55% 45%;
-    --sidebar-primary-foreground: 142 40% 8%;
-    --sidebar-accent: 142 30% 15%;
+    --sidebar-primary: 145 60% 50%;
+    --sidebar-primary-foreground: 280 40% 8%;
+    --sidebar-accent: 280 30% 15%;
     --sidebar-accent-foreground: 48 100% 98%;
-    --sidebar-border: 142 25% 20%;
-    --sidebar-ring: 142 55% 45%;
+    --sidebar-border: 280 25% 22%;
+    --sidebar-ring: 280 65% 55%;
   }
 }
 
@@ -155,11 +163,32 @@
   }
 
   .btn-bounce {
-    @apply transition-all duration-300 hover:scale-105 hover:-translate-y-1 active:scale-95;
+    @apply transition-all duration-300 hover:scale-110 hover:-translate-y-1 active:scale-95;
   }
 
   .card-playful {
-    @apply bg-card rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden;
+    @apply bg-card rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-primary/20;
+  }
+
+  .card-rainbow {
+    @apply relative overflow-hidden;
+  }
+
+  .card-rainbow::before {
+    content: '';
+    @apply absolute -inset-1 rounded-[2rem] opacity-0 transition-opacity duration-300;
+    background: linear-gradient(45deg, 
+      hsl(var(--coral)) 0%, 
+      hsl(var(--sunny)) 25%, 
+      hsl(var(--forest)) 50%, 
+      hsl(var(--sky)) 75%, 
+      hsl(var(--purple)) 100%
+    );
+    z-index: -1;
+  }
+
+  .card-rainbow:hover::before {
+    @apply opacity-100;
   }
 
   .gradient-forest {
@@ -176,6 +205,60 @@
 
   .gradient-sunny {
     background: linear-gradient(135deg, hsl(var(--sunny)) 0%, hsl(var(--sunny-light)) 100%);
+  }
+
+  .gradient-rainbow {
+    background: linear-gradient(135deg, 
+      hsl(var(--coral-light)) 0%, 
+      hsl(var(--sunny-light)) 25%, 
+      hsl(var(--mint-light)) 50%, 
+      hsl(var(--sky-light)) 75%, 
+      hsl(var(--purple-light)) 100%
+    );
+  }
+
+  .gradient-fun {
+    background: linear-gradient(135deg, 
+      hsl(var(--muted)) 0%, 
+      hsl(48 100% 97%) 50%,
+      hsl(var(--sky-light)) 100%
+    );
+  }
+
+  /* Fun pattern backgrounds */
+  .pattern-dots {
+    background-image: radial-gradient(hsl(var(--primary) / 0.1) 2px, transparent 2px);
+    background-size: 24px 24px;
+  }
+
+  .pattern-waves {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%2398d9a8' fill-opacity='0.1' d='M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% auto;
+  }
+
+  /* Fun text effects */
+  .text-rainbow {
+    background: linear-gradient(90deg, 
+      hsl(var(--coral)) 0%, 
+      hsl(var(--sunny)) 25%, 
+      hsl(var(--forest)) 50%, 
+      hsl(var(--sky)) 75%, 
+      hsl(var(--purple)) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Decorative shapes */
+  .shape-blob {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+
+  .shape-star {
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
   }
 }
 
@@ -198,6 +281,27 @@
 
   .animate-wiggle {
     animation: wiggle 1s ease-in-out infinite;
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 20s linear infinite;
+  }
+
+  .animate-pulse-soft {
+    animation: pulse-soft 3s ease-in-out infinite;
+  }
+
+  .animate-sparkle {
+    animation: sparkle 2s ease-in-out infinite;
+  }
+
+  .animate-hop {
+    animation: hop 0.6s ease-in-out infinite;
+  }
+
+  .animate-swing {
+    animation: swing 3s ease-in-out infinite;
+    transform-origin: top center;
   }
 
   @keyframes float {
@@ -224,6 +328,66 @@
     }
     50% {
       transform: rotate(3deg);
+    }
+  }
+
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes pulse-soft {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+  }
+
+  @keyframes sparkle {
+    0%, 100% {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+    25% {
+      transform: scale(1.2) rotate(90deg);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(0.8) rotate(180deg);
+      opacity: 1;
+    }
+    75% {
+      transform: scale(1.1) rotate(270deg);
+      opacity: 0.9;
+    }
+  }
+
+  @keyframes hop {
+    0%, 100% {
+      transform: translateY(0) scaleY(1);
+    }
+    30% {
+      transform: translateY(-12px) scaleY(1.1);
+    }
+    50% {
+      transform: translateY(-8px) scaleY(1);
+    }
+  }
+
+  @keyframes swing {
+    0%, 100% {
+      transform: rotate(-8deg);
+    }
+    50% {
+      transform: rotate(8deg);
     }
   }
 }
