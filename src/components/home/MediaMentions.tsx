@@ -6,6 +6,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import { useRef } from "react";
 
 import loriHero from "@/assets/lori-hero.jpg";
 import loriReading from "@/assets/lori-reading.jpg";
@@ -17,43 +19,47 @@ import loriPlayful from "@/assets/lori-playful.jpg";
 const articles = [
   {
     publication: "America Daily Post",
-    title: "Lori J Thompson Brings Joy to Young Readers with the Squeak Series",
+    title: "Lori J Thompson: Inspiring Young Readers with Squeak the Squirrel",
     image: loriHero,
-    link: "#",
+    link: "https://americadailypost.com/lori-j-thompson-inspiring-young-readers-with-squeak-the-squirrel/",
   },
   {
     publication: "LA Weekly Magazine",
-    title: "Meet the Author Behind the Beloved Children's Book Series Squeak",
+    title: "The 'Terrific Twos' Philosophy: A Fresh Take on Toddler Development",
     image: loriReading,
-    link: "#",
+    link: "https://laweeklymagazine.com/lori-j-thompson-terrific-twos/",
   },
   {
     publication: "USA Wire",
-    title: "How Squeak the Mouse is Teaching Kids About Friendship and Adventure",
+    title: "Children's Author Lori J Thompson on the Power of Nature-Inspired Storytelling",
     image: loriElegant,
-    link: "#",
+    link: "https://usawire.com/lori-j-thompson-nature-inspired-storytelling/",
   },
   {
     publication: "WellnessVoice",
-    title: "The Heartwarming Story Behind Lori J Thompson's Children's Books",
+    title: "Building Toddler Confidence Through Gentle Storytelling",
     image: loriThoughtful,
-    link: "#",
+    link: "https://wellnessvoice.com/lori-j-thompson-toddler-confidence/",
   },
   {
     publication: "The American Reporter",
-    title: "Author Lori J Thompson Shares Her Journey Into Children's Literature",
+    title: "From Backyard to Bookshelf: The Real Story Behind Squeak",
     image: loriFallPortrait,
-    link: "#",
+    link: "https://theamericanreporter.com/lori-j-thompson-squeak-story/",
   },
   {
     publication: "Time Business News",
-    title: "Squeak Series: A New Classic in Early Childhood Reading",
+    title: "Self-Published Success: Lori J Thompson's Journey as an Author-Entrepreneur",
     image: loriPlayful,
-    link: "#",
+    link: "https://timebusinessnews.com/lori-j-thompson-author-entrepreneur/",
   },
 ];
 
 export function MediaMentions() {
+  const plugin = useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })
+  );
+
   return (
     <section className="py-16 bg-gradient-to-b from-background to-secondary/20 relative overflow-hidden">
       {/* Fun decorations */}
@@ -81,6 +87,7 @@ export function MediaMentions() {
             align: "start",
             loop: true,
           }}
+          plugins={[plugin.current]}
           className="w-full"
         >
           <CarouselContent className="-ml-4">
@@ -112,6 +119,8 @@ export function MediaMentions() {
                       {/* Read Article Link */}
                       <a
                         href={article.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center gap-1.5 text-primary font-semibold text-sm hover:text-primary/80 transition-colors group/link"
                       >
                         Read Article
