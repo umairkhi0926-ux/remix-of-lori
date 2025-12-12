@@ -1,36 +1,46 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Newspaper, ArrowRight } from "lucide-react";
+import { Sparkles, ArrowRight } from "lucide-react";
 
 const mediaOutlets = [
-  { name: "America Daily Post", url: "#" },
-  { name: "LA Weekly Magazine", url: "#" },
-  { name: "USA Wire", url: "#" },
-  { name: "WellnessVoice", url: "#" },
-  { name: "The American Reporter", url: "#" },
-  { name: "Time Business News", url: "#" },
+  { name: "America Daily Post", emoji: "📰" },
+  { name: "LA Weekly Magazine", emoji: "🌟" },
+  { name: "USA Wire", emoji: "⚡" },
+  { name: "WellnessVoice", emoji: "💚" },
+  { name: "The American Reporter", emoji: "📺" },
+  { name: "Time Business News", emoji: "⏰" },
 ];
 
 export function MediaMentions() {
   return (
-    <section className="py-12 bg-primary">
-      <div className="container-page">
+    <section className="py-12 bg-gradient-to-r from-primary via-forest-light to-primary relative overflow-hidden">
+      {/* Fun decorations */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-4 left-[10%] text-2xl animate-sparkle">✨</div>
+        <div className="absolute bottom-4 right-[10%] text-2xl animate-sparkle" style={{ animationDelay: '0.5s' }}>⭐</div>
+        <div className="absolute top-1/2 left-[5%] text-xl animate-float">🎉</div>
+        <div className="absolute top-1/2 right-[5%] text-xl animate-float-delayed">🌟</div>
+      </div>
+
+      <div className="container-page relative">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Text */}
           <div className="flex items-center gap-3 text-primary-foreground">
-            <Newspaper className="w-6 h-6" />
-            <span className="font-display font-semibold text-lg">
-              As Featured In:
+            <Sparkles className="w-6 h-6 animate-sparkle" />
+            <span className="font-display font-bold text-lg flex items-center gap-2">
+              As Featured In
+              <span className="text-xl">📺</span>
             </span>
           </div>
 
           {/* Media Logos */}
-          <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4">
             {mediaOutlets.map((outlet) => (
               <span 
                 key={outlet.name}
-                className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm font-medium"
+                className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-primary-foreground hover:bg-white/30 transition-all hover:scale-105 text-sm font-medium flex items-center gap-2"
               >
+                <span>{outlet.emoji}</span>
                 {outlet.name}
               </span>
             ))}
@@ -41,11 +51,12 @@ export function MediaMentions() {
             asChild 
             variant="secondary" 
             size="sm" 
-            className="rounded-full btn-bounce whitespace-nowrap"
+            className="rounded-full btn-bounce whitespace-nowrap bg-white text-primary hover:bg-accent hover:text-accent-foreground shadow-lg"
           >
             <Link to="/media">
               View Press
               <ArrowRight className="w-4 h-4 ml-1" />
+              <span className="ml-1">📰</span>
             </Link>
           </Button>
         </div>
