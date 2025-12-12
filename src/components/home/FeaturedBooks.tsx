@@ -1,6 +1,9 @@
 import { ShoppingCart, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import bookSqueakOriginal from "@/assets/book-squeak-original.jpg";
+import bookSqueakNewFriends from "@/assets/book-squeak-new-friends.jpg";
+import bookSqueakColouring from "@/assets/book-squeak-colouring.jpg";
 
 const books = [
   {
@@ -8,7 +11,7 @@ const books = [
     title: "Squeak, The Little Grey Squirrel",
     description: "Follow Squeak on his very first adventure! A heartwarming tale inspired by the real squirrels in Lori's backyard, teaching toddlers about curiosity and bravery.",
     amazonUrl: "https://www.amazon.ca/Squeak-Little-Grey-Squirrel-Lori/dp/1525591096/",
-    color: "from-primary to-forest-light",
+    cover: bookSqueakOriginal,
     accent: "bg-primary",
   },
   {
@@ -16,7 +19,7 @@ const books = [
     title: "Squeak Meets New Friends",
     description: "Join Squeak as he meets Leo, Evlyn, and discovers a baby squirrel in need of help! A beautiful story about friendship and kindness.",
     amazonUrl: "https://www.amazon.ca/Squeak-Meets-New-Friends-Lori/dp/1039166245/",
-    color: "from-coral to-coral-light",
+    cover: bookSqueakNewFriends,
     accent: "bg-coral",
   },
   {
@@ -24,7 +27,7 @@ const books = [
     title: "Squeak's Colouring Book",
     description: "Bring Squeak's world to life with colors! This creative companion encourages imagination and fine motor skill development through fun coloring activities.",
     amazonUrl: "https://www.amazon.ca/Squeaks-Colouring-Book-Lori-J/dp/1039196772/",
-    color: "from-sky to-sky-light",
+    cover: bookSqueakColouring,
     accent: "bg-sky",
   },
 ];
@@ -52,16 +55,13 @@ export function FeaturedBooks() {
               className="card-playful group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Book Cover Placeholder */}
-              <div className={`aspect-[3/4] bg-gradient-to-br ${book.color} relative overflow-hidden`}>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center text-primary-foreground p-6">
-                    <div className="w-20 h-20 rounded-full bg-white/20 mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-4xl">📖</span>
-                    </div>
-                    <p className="font-display font-bold text-lg">{book.title}</p>
-                  </div>
-                </div>
+              {/* Book Cover */}
+              <div className="aspect-[3/4] relative overflow-hidden">
+                <img 
+                  src={book.cover} 
+                  alt={`${book.title} book cover`}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
                 
                 {/* Hover overlay */}
                 <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/10 transition-colors duration-300" />

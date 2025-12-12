@@ -1,6 +1,9 @@
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, Star, Heart, Palette, BookOpen } from "lucide-react";
+import bookSqueakOriginal from "@/assets/book-squeak-original.jpg";
+import bookSqueakNewFriends from "@/assets/book-squeak-new-friends.jpg";
+import bookSqueakColouring from "@/assets/book-squeak-colouring.jpg";
 
 const books = [
   {
@@ -16,7 +19,7 @@ const books = [
     ],
     themes: ["Curiosity", "Bravery", "Nature"],
     amazonUrl: "https://www.amazon.ca/Squeak-Little-Grey-Squirrel-Lori/dp/1525591096/",
-    color: "from-primary to-forest-light",
+    cover: bookSqueakOriginal,
     icon: BookOpen,
   },
   {
@@ -32,7 +35,7 @@ const books = [
     ],
     themes: ["Friendship", "Kindness", "Helping Others"],
     amazonUrl: "https://www.amazon.ca/Squeak-Meets-New-Friends-Lori/dp/1039166245/",
-    color: "from-coral to-coral-light",
+    cover: bookSqueakNewFriends,
     icon: Heart,
   },
   {
@@ -48,7 +51,7 @@ const books = [
     ],
     themes: ["Creativity", "Learning", "Play"],
     amazonUrl: "https://www.amazon.ca/Squeaks-Colouring-Book-Lori-J/dp/1039196772/",
-    color: "from-sky to-sky-light",
+    cover: bookSqueakColouring,
     icon: Palette,
   },
 ];
@@ -81,13 +84,12 @@ const Books = () => {
             >
               {/* Book Cover */}
               <div className={`relative ${index % 2 === 1 ? "lg:order-2" : ""}`}>
-                <div className={`aspect-[3/4] rounded-3xl bg-gradient-to-br ${book.color} relative overflow-hidden shadow-2xl`}>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center text-primary-foreground p-8">
-                      <book.icon className="w-20 h-20 mx-auto mb-4 opacity-80" />
-                      <p className="font-display font-bold text-2xl">{book.title}</p>
-                    </div>
-                  </div>
+                <div className="aspect-[3/4] rounded-3xl relative overflow-hidden shadow-2xl max-w-sm mx-auto lg:max-w-none">
+                  <img 
+                    src={book.cover} 
+                    alt={`${book.title} book cover`}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 
                 {/* Decorative elements */}
