@@ -3,10 +3,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
+import AutoScroll from "embla-carousel-auto-scroll";
 import { useRef } from "react";
 
 import loriHero from "@/assets/lori-hero.jpg";
@@ -57,7 +55,7 @@ const articles = [
 
 export function MediaMentions() {
   const plugin = useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })
+    AutoScroll({ speed: 1, stopOnInteraction: false, stopOnMouseEnter: true })
   );
 
   return (
@@ -86,6 +84,7 @@ export function MediaMentions() {
           opts={{
             align: "start",
             loop: true,
+            dragFree: true,
           }}
           plugins={[plugin.current]}
           className="w-full"
@@ -132,8 +131,6 @@ export function MediaMentions() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden md:flex -left-4 bg-primary text-primary-foreground hover:bg-primary/90 border-none shadow-lg" />
-          <CarouselNext className="hidden md:flex -right-4 bg-primary text-primary-foreground hover:bg-primary/90 border-none shadow-lg" />
         </Carousel>
       </div>
     </section>
