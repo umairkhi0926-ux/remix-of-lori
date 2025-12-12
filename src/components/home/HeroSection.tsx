@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, User, Leaf } from "lucide-react";
+import loriHero from "@/assets/lori-hero.jpg";
 
 export function HeroSection() {
   return (
@@ -54,7 +55,7 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Hero Image Placeholder - Will use author photo */}
+          {/* Hero Image */}
           <div className="relative animate-scale-in">
             <div className="relative aspect-square max-w-md mx-auto">
               {/* Decorative circle background */}
@@ -62,14 +63,11 @@ export function HeroSection() {
               
               {/* Main image container */}
               <div className="relative rounded-[3rem] overflow-hidden bg-muted aspect-square shadow-2xl">
-                <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10">
-                  <div className="text-center p-8">
-                    <Leaf className="w-16 h-16 text-primary mx-auto mb-4" />
-                    <p className="font-display text-xl text-muted-foreground">
-                      Author Photo
-                    </p>
-                  </div>
-                </div>
+                <img 
+                  src={loriHero} 
+                  alt="Lori J Thompson holding her book Squeak Meets New Friends"
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
 
               {/* Floating badge */}

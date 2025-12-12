@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Heart, BookOpen, GraduationCap, ArrowRight } from "lucide-react";
+import loriFallOutdoor from "@/assets/lori-fall-outdoor.jpg";
 
 const highlights = [
   {
@@ -33,16 +34,11 @@ export function AboutPreview() {
               
               {/* Main image container */}
               <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden bg-card shadow-xl">
-                <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/5 to-accent/5">
-                  <div className="text-center p-8">
-                    <div className="w-24 h-24 rounded-full bg-primary/10 mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-5xl">👩‍🏫</span>
-                    </div>
-                    <p className="font-display text-xl text-muted-foreground">
-                      Lori's Photo
-                    </p>
-                  </div>
-                </div>
+                <img 
+                  src={loriFallOutdoor} 
+                  alt="Lori J Thompson outdoors in autumn with her book"
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               {/* Quote badge */}

@@ -2,6 +2,8 @@ import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Heart, BookOpen, GraduationCap, Users, Sparkles, ArrowRight } from "lucide-react";
+import loriWhiteJacket from "@/assets/lori-white-jacket.jpg";
+import loriThoughtful from "@/assets/lori-thoughtful.jpg";
 
 const milestones = [
   {
@@ -48,14 +50,11 @@ const About = () => {
             {/* Image */}
             <div className="relative animate-scale-in">
               <div className="relative aspect-square max-w-md mx-auto rounded-[3rem] overflow-hidden bg-muted shadow-xl">
-                <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/10 to-coral/10">
-                  <div className="text-center p-8">
-                    <span className="text-8xl">👩‍🏫</span>
-                    <p className="font-display text-xl text-muted-foreground mt-4">
-                      Author Photo
-                    </p>
-                  </div>
-                </div>
+                <img 
+                  src={loriWhiteJacket} 
+                  alt="Lori J Thompson professional portrait"
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
             </div>
           </div>
@@ -69,6 +68,18 @@ const About = () => {
             <h2 className="heading-section text-foreground text-center mb-8">
               The Story Behind the Stories
             </h2>
+            
+            <div className="float-right ml-8 mb-6 hidden md:block">
+              <div className="relative">
+                <div className="w-64 aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
+                  <img 
+                    src={loriThoughtful} 
+                    alt="Lori J Thompson thoughtful portrait"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
             
             <p className="text-body text-muted-foreground">
               Lori J Thompson's journey as a children's author is rooted in her deep love for 
