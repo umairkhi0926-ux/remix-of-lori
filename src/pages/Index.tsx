@@ -9,8 +9,8 @@ const Index = () => {
     <Layout>
       <HeroSection />
       <FeaturedBooks />
-      <AboutPreview />
       <MediaMentions />
+      <AboutPreview />
     </Layout>
   );
 };
